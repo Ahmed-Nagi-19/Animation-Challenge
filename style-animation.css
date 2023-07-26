@@ -1,0 +1,144 @@
+div.animate-container {
+    display: grid;
+    grid-template-columns: repeat(4, 50px) 20px repeat(4, 50px);
+    grid-template-rows: repeat(7, 50px);
+}
+
+div.letter-E {
+    grid-area: 1/1/1/5;
+    background-color: black;
+    position: relative;
+}
+
+div.help-letter-E-1 {
+    grid-area: 2/1/8;
+    background-color: black;
+}
+
+div.help-letter-E-2 {
+    grid-area: 4/2/4/5;
+    background-color: black;
+}
+
+div.help-letter-E-3 {
+    grid-area: 7/2/7/5;
+    background-color: black;
+}
+
+div.letter-E::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background-color: orangered;
+    animation-name: letter-E;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes letter-E {
+    0% {
+        transform: translateX(0px);
+    }
+
+    8% {
+        transform: translateX(-150px);
+    }
+
+    15% {
+        transform: translateY(150px) translateX(-150px);
+    }
+
+    22% {
+        transform: translateY(150px) translateX(0px);
+    }
+
+    29% {
+        transform: translateY(150px) translateX(-150px);
+    }
+
+    36% {
+        transform: translateY(300px) translateX(-150px);
+    }
+
+    43% {
+        transform: translateY(300px) translateX(0px);
+    }
+
+    50% {
+        transform: translateY(300px) translateX(-150px);
+    }
+
+    58% {
+        transform: translateY(0px) translateX(-150px);
+    }
+
+    65% {
+        transform: translateY(0px) translateX(0px);
+    }
+
+    100% {
+        animation-play-state: paused;
+    }
+}
+
+div.help-letter-L-1 {
+    grid-area: 1/6/8;
+    background-color: black;
+}
+
+div.letter-L {
+    grid-area: 7/6/7/10;
+    background-color: black;
+    position: relative;
+}
+
+div.letter-L::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    border-bottom: 5px;
+    background-color: orangered;
+    opacity: 0;
+    animation-name: letter-L;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes letter-L {
+    0% {
+        transform: translateX(0px);
+        opacity: 0;
+    }
+
+    65% {
+        transform: translateX(0px);
+        opacity: 0;
+    }
+
+    66% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+    81% {
+        transform: translateX(-150px);
+    }
+
+    96% {
+        transform: translateY(-300px) translateX(-150px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-300px) translateX(-150px);
+        opacity: 0;
+    }
+}
